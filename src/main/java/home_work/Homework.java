@@ -35,10 +35,10 @@ public class Homework {
 
     }
     static void printStats(String text) {
-        // 1. Split текста, приведение его к нижнему регистру, удаление запятых и точек.
+
         String [] words = text.toLowerCase().replaceAll("[.,]","").split("\\s+");
-        // 2. Сбор структуры со статистикой.
-        Map<Integer, List<String>> stats = new TreeMap<>(); // Структура, в которой ключ - длина слова, значение - список таких слов.
+
+        Map<Integer, List<String>> stats = new TreeMap<>();
         for (String word : words) {
             int length = word.replaceAll("-","").length();
             if (stats.containsKey(length)) {
@@ -53,5 +53,6 @@ public class Homework {
             System.out.println(entry.getKey() + "->" + entry.getValue());
         }
     }
+
 
 }
