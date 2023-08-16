@@ -27,14 +27,15 @@ public class Lesson3Main {
      */
     private static void countAndPrint(ArrayList<String> strings) {
         ArrayList<String> unique = new ArrayList<>();
-        for (int i = 0; i < strings.size(); i++) { // [0, size)
+        for (int i = 0; i < strings.size(); i++) { // [0, size) проходим по всем элементам
             String element = strings.get(i);
-            if (unique.contains(element)) {
+            if (unique.contains(element)) { // проверяем каждый елемент
                 continue;
             }
 
             int counter = 1;
-            for (int j = i + 1; j < strings.size(); j++) { // [i + 1, size)
+            for (int j = i + 1; j < strings.size(); j++) { // [i + 1, size) считаем сколько элементов
+                // таких же как мы проходили в цикле выше
                 String another = strings.get(j);
                 if (element.equals(another)) {
                     counter++;
@@ -70,7 +71,7 @@ public class Lesson3Main {
      */
     private static void removeIntegers(List<String> strings) {
 //        strings.removeIf(it -> isInteger(it));
-
+//
         Iterator<String> iterator = strings.iterator();
         while (iterator.hasNext()) {
             String element = iterator.next();
