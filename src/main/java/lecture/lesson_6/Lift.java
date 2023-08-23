@@ -1,4 +1,4 @@
-package home_work.Elevator;
+package lecture.lesson_6;
 
 import java.util.Scanner;
 
